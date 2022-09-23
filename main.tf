@@ -1,6 +1,7 @@
 # Configure AWS Provider
 provider "aws" {
     region = var.region
+    profile = "tf-user"
 }
 
 # Create VPC
@@ -19,6 +20,12 @@ module "vpc" {
 
 # Create security group
 module "security-group" {
-  source = "./modules/securitygroups"
-  vpc-id = module.vpc.vpc-id
+  source                = "./modules/securitygroups"
+  vpc-id                = module.vpc.vpc-id
+}
+
+# Create IAM Role
+module "ecs-task-execution-role" {
+  source                = "./modules/ecs-task-exec-role"
+  project-name          = var.project-name
 }
