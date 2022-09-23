@@ -1,0 +1,9 @@
+variable "project-name" {}
+variable "pub-sub-az1-id" {}
+variable "pub-sub-az2-id" {}
+variable "internet_gateway" {}
+variable "vpc-id" {}
+variable "pvt-app-sub-az1-id" {}
+variable "pvt-data-sub-az1-id" {}
+variable "pvt-app-sub-az2-id" {}
+variable "pvt-data-sub-az2-id" {}
