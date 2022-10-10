@@ -4,6 +4,5 @@ terraform {
     bucket      = "terraformbackupfile-s3"
     key         = "lih-website-ecs.tfstate.dev"
     region      = "ap-south-1"
-    profile     = "tf-user"
   }
 }
